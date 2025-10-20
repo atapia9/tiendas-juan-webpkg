@@ -1,0 +1,103 @@
+{
+  "updated_at": "2025-10-20T06:30:13.143669",
+  "stores": [
+    "Tienda A",
+    "Tienda B",
+    "Tienda C",
+    "Tienda D"
+  ],
+  "facturacion_total": [
+    152340.5,
+    187992.0,
+    134880.75,
+    96550.0
+  ],
+  "promedio_evaluacion": [
+    4.3,
+    4.1,
+    4.6,
+    3.9
+  ],
+  "costo_envio_promedio": [
+    85.3,
+    72.9,
+    90.5,
+    110.0
+  ],
+  "categorias_top": {
+    "Tienda A": {
+      "Electrónica": 430,
+      "Ropa": 320,
+      "Hogar": 210,
+      "Belleza": 180,
+      "Juguetes": 95
+    },
+    "Tienda B": {
+      "Ropa": 510,
+      "Electrónica": 350,
+      "Deportes": 220,
+      "Hogar": 200,
+      "Libros": 120
+    },
+    "Tienda C": {
+      "Hogar": 400,
+      "Electrónica": 300,
+      "Jardín": 180,
+      "Ropa": 170,
+      "Mascotas": 90
+    },
+    "Tienda D": {
+      "Belleza": 260,
+      "Hogar": 190,
+      "Ropa": 150,
+      "Electrónica": 120,
+      "Alimentos": 110
+    }
+  },
+  "productos_extremos": {
+    "Tienda A": {
+      "mas_vendidos": [
+        "Audífonos X100",
+        "Playera Básica",
+        "Cafetera Pro"
+      ],
+      "menos_vendidos": [
+        "Rompecabezas 500p",
+        "Crema facial Noche"
+      ]
+    },
+    "Tienda B": {
+      "mas_vendidos": [
+        "Jeans Slim",
+        "Smartwatch Z",
+        "Balón Fútbol"
+      ],
+      "menos_vendidos": [
+        "Libro Poesía",
+        "Vela Aromática"
+      ]
+    },
+    "Tienda C": {
+      "mas_vendidos": [
+        "Sartén Antiadherente",
+        "Kit Jardinería",
+        "Router AC"
+      ],
+      "menos_vendidos": [
+        "Collar Mascota S",
+        "Sudadera Oversize"
+      ]
+    },
+    "Tienda D": {
+      "mas_vendidos": [
+        "Serum Vitamina C",
+        "Licuadora 600W",
+        "Polo Clásica"
+      ],
+      "menos_vendidos": [
+        "Cereal Integral",
+        "Tablet 7”"
+      ]
+    }
+  }
+}

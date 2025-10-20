@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informe Ejecutivo — Tiendas de Juan</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+  <script src="assets/report.js" defer></script>
+  <meta name="description" content="Informe ejecutivo con visualizaciones para apoyar la decisión de venta de tienda." />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.77 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" fill="#4aa3ff"/>
+        </svg>
+        <h1>Informe Ejecutivo — Tiendas de Juan</h1>
+      </div>
+      <div class="badges">
+        <a href="notebooks/InformeTiendasAlura.ipynb" class="small" title="Notebook local">
+          <span class="code">Notebook (.ipynb)</span>
+        </a>
+      </div>
+    </header>
+
+    <section class="card">
+      <p class="small muted">Última actualización: <span id="updated-at">—</span></p>
+      <p>
+        Este tablero resume cinco preguntas clave para decidir <strong>qué tienda vender</strong> e invertir en un nuevo negocio:
+      </p>
+      <ul>
+        <li>Facturación total por tienda</li>
+        <li>Categorías más populares por tienda</li>
+        <li>Promedio de evaluación de clientes</li>
+        <li>Productos más y menos vendidos</li>
+        <li>Costo promedio de envío por tienda</li>
+      </ul>
+      <p class="muted small">
+        ⚙️ Reemplaza los valores en <span class="code">data/metrics.json</span> con tus resultados reales. O usa la notebook para exportarlos automáticamente.
+      </p>
+    </section>
+
+    <section class="grid">
+      <div class="card half">
+        <h2>Facturación total por tienda</h2>
+        <div id="chart-fact" style="height:340px"></div>
+      </div>
+      <div class="card half">
+        <h2>Promedio de evaluación</h2>
+        <div id="chart-eval" style="height:340px"></div>
+      </div>
+      <div class="card full">
+        <h2>Categorías más populares (Top por tienda)</h2>
+        <div id="chart-categorias" style="height:420px"></div>
+      </div>
+      <div class="card half">
+        <h2>Costo promedio de envío</h2>
+        <div id="chart-envio" style="height:340px"></div>
+      </div>
+      <div class="card half">
+        <h2>Cómo editar los datos</h2>
+        <ol class="small">
+          <li>Abre <span class="code">data/metrics.json</span> o ejecuta el exportador en la notebook.</li>
+          <li>Actualiza listas de <em>stores</em>, valores de facturación, evaluación y envío.</li>
+          <li>Edita <em>categorias_top</em> y <em>productos_extremos</em> por tienda.</li>
+          <li>Guarda y recarga la página.</li>
+        </ol>
+      </div>
+
+      <div class="card full">
+        <h2>Geografía de ventas (opcional)</h2>
+        <p class="small">Ejecuta en la notebook el bloque <em>Análisis geográfico</em> para generar:
+          <span class="code">assets/geo_scatter.png</span>,
+          <span class="code">assets/geo_heatmap_hexbin.png</span> y
+          <span class="code">assets/ventas_mapa.html</span>.
+        </p>
+        <div class="list-inline">
+          <a class="small code" href="assets/ventas_mapa.html">Mapa interactivo (Folium)</a>
+          <a class="small code" href="assets/geo_scatter.png">Dispersión (PNG)</a>
+          <a class="small code" href="assets/geo_heatmap_hexbin.png">Heatmap (PNG)</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Productos extremos por tienda</h2>
+      <div id="productos-extremos"></div>
+    </section>
+
+    <section class="card">
+      <h2>Conclusiones y recomendación</h2>
+      <p class="small">
+        Con base en la comparación de <strong>ventas</strong>, <strong>satisfacción</strong> y <strong>costos logísticos</strong>, prioriza la
+        rentabilidad sostenida. Si una tienda combina <em>baja facturación</em>, <em>peores evaluaciones</em> y <em>alto costo de envío</em>, es una candidata
+        natural para la venta. Valida además tendencias de 3–6 meses y riesgos de concentración por categorías.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>Hecho con ❤️ y Plotly. Despliegue sugerido en <strong>GitHub Pages</strong>.</p>
+    </footer>
+  </div>
+</body>
+</html>
